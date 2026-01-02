@@ -25,9 +25,9 @@ const NewBoardForm = ({createNewBoard}) => {
 
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    createNewBoard(formData); //resets the text bar when the form is submitted
-    setFormData(kDefaultsFormState)
+    event.preventDefault(); 
+    createNewBoard(formData); //notifying rest of the app that there is data abailable 
+    setFormData(kDefaultsFormState) //resets the text bar when the form is submitted
   }
 
   const makeControlledInput = (inputName) => {
