@@ -26,7 +26,7 @@ const NewBoardForm = ({createNewBoard}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    createNewBoard(formData); //notifying rest of the app that there is data abailable 
+    createNewBoard(formData); //notifying rest of the app that there is data available 
     setFormData(kDefaultsFormState) //resets the text bar when the form is submitted
   }
 
@@ -49,8 +49,8 @@ const NewBoardForm = ({createNewBoard}) => {
         { makeControlledInput('title') }
       </div>
       <div>
-        <label htmlFor="description">Owner's Name: </label>
-        { makeControlledInput('description') }
+        <label htmlFor="owner">Owner's Name: </label>
+        { makeControlledInput('owner') }
       </div>
       <div className="submit-button-wrapper">
         <input type="submit" value="Create A New Board"/>
