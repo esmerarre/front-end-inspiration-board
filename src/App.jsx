@@ -1,11 +1,11 @@
 import Board from './components/Board';
-// import CardList from './components/CardList';
+import CardsList from './components/CardsList';
 // import NewBoardForm from './components/NewBoardForm';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const kBaseUrl = import.meta.env.BACKEND_URL;
+const kBaseUrl = import.meta.env.VITE_BACKEND_URL;
 
 const App = () => {
   const [boardsData, setBoardsData] = useState([]);
@@ -44,7 +44,7 @@ const App = () => {
       <section className="boards-container">
         <section>
           <h2>Add a New Board!</h2>
-          <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm>
+          {/* <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm> */}
         </section>
         <section>
           <h2>Choose from an Existing Board!</h2>
@@ -53,7 +53,7 @@ const App = () => {
       </section>
       <section className="selected-boards-container">
         <section>
-          <CardList board={selectedBoard}></CardList>
+          <CardsList board={selectedBoard}></CardsList>
         </section>
       </section>
     </main>
