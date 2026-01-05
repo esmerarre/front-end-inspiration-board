@@ -1,6 +1,6 @@
 import Board from './components/Board';
 import CardsList from './components/CardsList';
-// import NewBoardForm from './components/NewBoardForm';
+import NewBoardForm from './components/NewBoardForm';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -44,7 +44,7 @@ const App = () => {
       <section className="boards-container">
         <section>
           <h2>Add a New Board!</h2>
-          {/* <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm> */}
+          <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm>
         </section>
         <section>
           <h2>Choose from an Existing Board!</h2>
