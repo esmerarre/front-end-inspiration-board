@@ -2,6 +2,8 @@ import Card from './Card';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import NewCardForm from './NewCardForm';
+
 
 const kBaseUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -48,6 +50,10 @@ const CardsList = ({board}) => {
     return (
         <section className='card__container'>
             <h2>{board.title}</h2>
+            <section>
+                <h2>Add a New Card!</h2>
+                <NewCardForm createNewCard = {createNewCard}></NewCardForm>
+            </section>
             <div className='individual-card'>
                 {cardsList}
             </div>
