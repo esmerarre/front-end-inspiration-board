@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import NewCardForm from './NewCardForm';
 import './CardsList.css';
 
-
 const kBaseUrl = import.meta.env.VITE_BACKEND_URL;
 
 const CardsList = ({board}) => {

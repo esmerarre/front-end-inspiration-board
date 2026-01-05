@@ -7,17 +7,6 @@ import axios from 'axios';
 
 const kBaseUrl = import.meta.env.VITE_BACKEND_URL;
 
-// const convertFromAPI = (apiBoard) => {
-//   const newBoard = {
-//     ...apiBoard,
-//     boardID: apiBoard.board_id,
-//   };
-
-
-//   return newBoard;
-// };
-
-
 const App = () => {
   const [boardsData, setBoardsData] = useState([]);
 
