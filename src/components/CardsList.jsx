@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import NewCardForm from './NewCardForm';
+import './CardsList.css';
 
 
 const kBaseUrl = import.meta.env.VITE_BACKEND_URL;
@@ -11,13 +12,13 @@ const CardsList = ({board}) => {
     const [cardsData, setCardsData] = useState([]);
 
     useEffect(() => {
-        axios.get(`${kBaseUrl}/boards/${board.board_id}/cards`)
+        axios.get(`${kBaseUrl}/boards/${board.id}/cards`)
             .then(response => setCardsData(response.data))
             .catch(e => console.log(e));
         }, [board]);
 
     const createNewCard = message => {
-        axios.post(`${kBaseUrl}/boards/${board.board_id}/cards`, {message})
+        axios.post(`${kBaseUrl}/boards/${board.id}/cards`, {message}) 
             .then(response => 
                 setCardsData(prev => [...prev, response.data]))
             .catch(e => console.log(e));
@@ -43,19 +44,19 @@ const CardsList = ({board}) => {
 
     const cardsList = cardsData.map(card => {
         return (
-            <Card key={card.card_id} card={card} onLike={onLike} onDelete={onDelete} />
+            <Card key={card.card_id} id={card.card_id} card={card} onLike={onLike} onDelete={onDelete} />
         )
     });
 
     return (
-        <section className='card__container'>
+        <section className='card-container'>
             <h2>{board.title}</h2>
             <section>
                 <h2>Add a New Card!</h2>
                 <NewCardForm createNewCard = {createNewCard}></NewCardForm>
             </section>
             <div className='individual-card'>
-                {cardsList}
+                <ul> {cardsList} </ul>
             </div>
         </section>
     )
@@ -64,8 +65,9 @@ const CardsList = ({board}) => {
 
 CardsList.propTypes = {
     board: PropTypes.shape({
-        board_id: PropTypes.number.isRequired,
+        id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
+        owner: PropTypes.string.isRequired
     }).isRequired,
 };
 
