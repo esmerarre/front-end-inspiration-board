@@ -25,15 +25,16 @@ const App = () => {
   };
 
   const [selectedBoard, setSelectedBoard] = useState({
+    owner: '',
     title: '',
-    board_id: null
+    id: null
   });
 
   const selectBoard = board => {setSelectedBoard(board)};
 
   const boardList = boardsData.map((board) => {
     return (
-      <li key={board.board_id}>
+      <li key={board.id}>
         <Board board={board} onBoardSelect={selectBoard} />
       </li>
     )});
