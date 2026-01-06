@@ -39,18 +39,27 @@ const App = () => {
       </li>
     )});
 
+  const [isBoardFormVisible, setIsBoardFormVisible] = useState(true);
+  
+  const toggleBoardForm = () => {
+    setIsBoardFormVisible(!isBoardFormVisible);
+  }
+
   return (
     <main>
       <h1>Spread the Love!</h1>
       <div className = "box">
       <section className="boards-container">
-        <section>
-          <h2>Add a New Board!</h2>
-          <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm>
-        </section>
         <section className ="existing-boards-container">
           <h2>Choose from an Existing Board!</h2>
           <ul>{boardList}</ul>
+        </section>
+        <section>
+          <h2>Add a New Board!</h2>
+          <div id={isBoardFormVisible ? '' : 'hidden'}>
+          <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm>
+          </div>
+          <button onClick={toggleBoardForm}>{isBoardFormVisible ? 'Hide Board Form' : 'Show Board Form'}</button>
         </section>
       </section>
       <section className="selected-boards-container">

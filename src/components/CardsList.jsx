@@ -17,7 +17,7 @@ const CardsList = ({board}) => {
         }, [board]);
 
     const createNewCard = message => {
-        axios.post(`${kBaseUrl}/boards/${board.id}/cards`, {message}) 
+        axios.post(`${kBaseUrl}/boards/${board.id}/cards`, message) 
             .then(response => 
                 setCardsData(prev => [...prev, response.data]))
             .catch(e => console.log(e));

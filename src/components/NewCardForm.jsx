@@ -5,7 +5,7 @@ import './NewCardForm.css';
 // createNewCard will be passed as a prop. Needs to be added to App.jsx
 
 const kDefaultsFormState = {
-    message: '',
+    message: ''
 };
 
 const NewCardForm = ({createNewCard}) => {
