@@ -44,3 +44,7 @@
 .existing-boards-container {
   margin-top: 2rem;
 }
+
+#hidden {
+  display: none;
+} 
