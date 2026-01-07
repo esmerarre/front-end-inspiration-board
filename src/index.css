@@ -19,7 +19,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 
 .box {
@@ -34,11 +34,12 @@ a:hover {
 .box .boards-container {
   background-color: rgb(241, 242, 243);
   border: 2px solid rgb(18, 20, 21);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 30px;
   margin-right: 300px;
   margin-left: 150px;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -54,7 +55,6 @@ h1 {
   list-style-type: none;
   margin-top: 2rem;
 }
-
 
 button {
   border-radius: 8px;
@@ -80,11 +80,11 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #c0c9d0;
+    color: #000000;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #f2f2f6;
   }
   button {
     background-color: #f9f9f9;

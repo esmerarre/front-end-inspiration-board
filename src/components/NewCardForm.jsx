@@ -44,7 +44,7 @@ const NewCardForm = ({createNewCard}) => {
 
   return (
     <form onSubmit={handleSubmit} className="card-form">
-      <div className="input-message-wrapper">
+      <div className="input-wrapper">
         <label htmlFor="message">Message: </label>
         { makeControlledInput('message') }
       </div>

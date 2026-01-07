@@ -5,6 +5,7 @@
   justify-content: start;
 }
 
-.input-message-wrapper input {
+.input-wrapper input {
   background-color: white;
+  color: black
 }

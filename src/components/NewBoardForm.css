@@ -7,4 +7,14 @@
 
 .input-wrapper input {
   background-color: white;
+  color: black
+}
+
+.submit-button-wrapper input {
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
 }

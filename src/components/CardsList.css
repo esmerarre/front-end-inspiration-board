@@ -4,3 +4,13 @@
     gap: 1rem;
     padding: 1rem;
 }
+
+.individual-cards ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

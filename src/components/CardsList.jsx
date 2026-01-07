@@ -61,7 +61,7 @@ const CardsList = ({board}) => {
                 <h2>Add a New Card!</h2>
                 <NewCardForm createNewCard = {createNewCard}></NewCardForm>
             </section>
-            <div className='individual-card'>
+            <div className='individual-cards'>
                 <ul>{cardsList}</ul>
             </div>
         </section>
