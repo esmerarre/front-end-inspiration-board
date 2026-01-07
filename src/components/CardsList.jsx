@@ -47,7 +47,8 @@ const CardsList = ({board}) => {
             <Card 
                 key={card.card_id} 
                 id={card.card_id} 
-                message={card.message} 
+                message={card.message}
+                likeCount = {card.likes}
                 onLike={onLike} 
                 onDelete={onDelete} />
         )
