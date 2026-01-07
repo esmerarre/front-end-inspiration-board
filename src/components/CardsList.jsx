@@ -34,9 +34,9 @@ const CardsList = ({board}) => {
     const onLike = card => {
         axios.put(`${kBaseUrl}/cards/${card.card_id}/like`)
             .then(() => {
-                const updateCardsData = cardsData.map(prev => {
-                    prev.card_id !== card.card_id ? prev : {...prev, likesCount: prev.likesCount + 1}
-                });
+                const updateCardsData = cardsData.map(prev =>
+                    prev.card_id !== card.card_id ? prev : {...prev, likesCount: prev.likeCount + 1}
+                );
                 setCardsData(updateCardsData);
             }).catch(e => console.log(e));
     };

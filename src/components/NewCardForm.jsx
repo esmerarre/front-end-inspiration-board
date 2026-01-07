@@ -26,6 +26,12 @@ const NewCardForm = ({createNewCard}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
+
+    if (!formData.message.trim()){ //popup if field left empty
+      alert('Please write a message for the board!!');
+      return;
+    }
+
     createNewCard(formData); //notifying rest of the app that there is data available 
     setFormData(kDefaultsFormState) //resets the text bar when the form is submitted
   }

@@ -26,6 +26,12 @@ const NewBoardForm = ({createNewBoard}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
+
+    if (!formData.title.trim() || !formData.owner.trim()){ //popup if field left empty
+      alert('Please put a board name and owner name!');
+      return;
+    }
+
     createNewBoard(formData); //notifying rest of the app that there is data available 
     setFormData(kDefaultsFormState) //resets the text bar when the form is submitted
   }
