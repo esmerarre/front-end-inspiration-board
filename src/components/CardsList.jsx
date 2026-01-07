@@ -41,9 +41,16 @@ const CardsList = ({board}) => {
             }).catch(e => console.log(e));
     };
 
+
     const cardsList = cardsData.map(card => {
         return (
-            <Card key={card.card_id} id={card.card_id} card={card} onLike={onLike} onDelete={onDelete} />
+            <Card 
+                key={card.card_id} 
+                id={card.card_id} 
+                message={card.message}
+                likeCount = {card.likes}
+                onLike={onLike} 
+                onDelete={onDelete} />
         )
     });
 
@@ -55,7 +62,7 @@ const CardsList = ({board}) => {
                 <NewCardForm createNewCard = {createNewCard}></NewCardForm>
             </section>
             <div className='individual-card'>
-                <ul> {cardsList} </ul>
+                <ul>{cardsList}</ul>
             </div>
         </section>
     )
