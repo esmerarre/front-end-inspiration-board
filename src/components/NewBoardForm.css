@@ -4,3 +4,7 @@
   gap: 0.5rem;
   justify-content: start;
 }
+
+.input-wrapper input {
+  background-color: white;
+}
