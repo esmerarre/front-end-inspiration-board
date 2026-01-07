@@ -48,7 +48,6 @@ const CardsList = ({board}) => {
                 key={card.card_id} 
                 id={card.card_id} 
                 message={card.message} 
-                card={card} 
                 onLike={onLike} 
                 onDelete={onDelete} />
         )
