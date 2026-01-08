@@ -8,9 +8,9 @@ const Card = ({id, message, likeCount, onLike = () => {}, onDelete = () => {}}) 
     return (
         <div className='card-item'>
             <div className='card-control-options'>
-                <button className='card-item__add-likes' onClick={() => onLike(id)}>+</button>
+                <button className='card-item__add-likes' onClick={onLike}>+</button>
                 <span>{likeCount} {heartColor}</span>
-                <button className='card-item__delete' onClick={() => onDelete(id)}>x</button>
+                <button className='card-item__delete' onClick={onDelete}>x</button>
             </div>
             <p className='card-item__text'>{message}</p>
         </div>

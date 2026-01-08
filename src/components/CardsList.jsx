@@ -23,19 +23,19 @@ const CardsList = ({board}) => {
             .catch(e => console.log(e));
     };
 
-    const onDelete = card => {
-        axios.delete(`${kBaseUrl}/cards/${card.card_id}`)
+    const onDeleteCard = card => {
+        axios.delete(`${kBaseUrl}/cards/${card.id}`)
             .then(() => {
-                setCardsData(prev => prev.filter(newCard => newCard.card_id !== card.card_id)
+                setCardsData(prev => prev.filter(newCard => newCard.id !== card.id)
                 );
             }).catch(e => console.log(e));
     };
 
-    const onLike = card => {
-        axios.put(`${kBaseUrl}/cards/${card.card_id}/like`)
+    const onLikeCard = card => {
+        axios.patch(`${kBaseUrl}/cards/${card.id}/like`)
             .then(() => {
                 const updateCardsData = cardsData.map(prev =>
-                    prev.card_id !== card.card_id ? prev : {...prev, likesCount: prev.likeCount + 1}
+                    prev.id !== card.id ? prev : {...prev, likes: prev.likes + 1}
                 );
                 setCardsData(updateCardsData);
             }).catch(e => console.log(e));
@@ -45,12 +45,12 @@ const CardsList = ({board}) => {
     const cardsList = cardsData.map(card => {
         return (
             <Card 
-                key={card.card_id} 
-                id={card.card_id} 
+                key={card.id} 
+                id={card.id} 
                 message={card.message}
                 likeCount = {card.likes}
-                onLike={onLike} 
-                onDelete={onDelete} />
+                onLike={() => onLikeCard(card)} 
+                onDelete={() => onDeleteCard(card)} />
         )
     });
 
