@@ -36,7 +36,7 @@ const NewCardForm = ({createNewCard}) => {
     setFormData(kDefaultsFormState) //resets the text bar when the form is submitted
   }
 
-  const maxLength = 250;
+  const maxLength = 50;
 
   const makeControlledInput = (inputName) => {
     return (
