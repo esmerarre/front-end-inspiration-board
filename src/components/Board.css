@@ -1,0 +1,22 @@
+.board-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.board-title {
+    cursor: pointer;
+    flex: 1;
+}
+
+.board-title:hover {
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.board-button {
+    cursor: pointer;
+    margin-left: 10px;
+}

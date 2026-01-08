@@ -58,7 +58,7 @@ const CardsList = ({board}) => {
         <section className='card-container'>
             <h2 id="board-title">✨✨{board.title}✨✨</h2>
             <section>
-                <h2>Add a New Card!</h2>
+                <h3>Add a New Card!</h3>
                 <NewCardForm createNewCard = {createNewCard}></NewCardForm>
             </section>
             <div className='individual-cards'>

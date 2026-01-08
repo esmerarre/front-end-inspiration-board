@@ -36,10 +36,14 @@ const NewCardForm = ({createNewCard}) => {
     setFormData(kDefaultsFormState) //resets the text bar when the form is submitted
   }
 
+  const maxLength = 50;
+
   const makeControlledInput = (inputName) => {
     return (
       <input
         type="text"
+        placeholder={`Max ${maxLength} characters`}
+        maxLength={maxLength}
         name={inputName}
         id={`input-${inputName}`}
         value={formData[inputName]}
@@ -52,7 +56,7 @@ const NewCardForm = ({createNewCard}) => {
     <form onSubmit={handleSubmit} className="card-form">
       <div className="input-wrapper">
         <label htmlFor="message">Message: </label>
-        { makeControlledInput('message') }
+        <div>{makeControlledInput('message')}</div>
       </div>
       <div className="submit-button-wrapper">
         <input type="submit" value="Create A New Card"/>

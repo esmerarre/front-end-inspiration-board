@@ -1,7 +1,7 @@
 import './Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({id, message, likeCount, onLike = () => {}, onDelete = () => {}}) => {
+const Card = ({message, likeCount, onLike = () => {}, onDelete = () => {}}) => {
 
     const heartColor = likeCount > 0 ? '❤️' : '🤍';
 

@@ -31,11 +31,19 @@ const App = () => {
   });
 
   const selectBoard = board => {setSelectedBoard(board)};
+  
+  const handleDeleteBoard = (board) => {
+    axios.delete(`${kBaseUrl}/boards/${board.id}`)
+    .then(()=> {
+      setBoardsData(prev => prev.filter(deleteBoard => deleteBoard.id !== board.id));
+    })
+    .catch(e => console.log(e));
+  };
 
   const boardList = boardsData.map((board) => {
     return (
       <li key={board.id}>
-        <Board board={board} onBoardSelect={selectBoard} />
+        <Board board={board} onBoardSelect={selectBoard} onDeleteSelect={handleDeleteBoard}/>
       </li>
     )});
 
@@ -47,7 +55,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>Spread the Love!</h1>
+      <h1>SPREAD THE LOVE!</h1>
       <div className = "box">
       <section className="boards-container">
         <section className ="existing-boards-container">
@@ -55,16 +63,17 @@ const App = () => {
           <ul>{boardList}</ul>
         </section>
         <section>
-          <h2>Add a New Board!</h2>
           <div id={isBoardFormVisible ? '' : 'hidden'}>
+          <h3>Add a New Board!</h3>
           <NewBoardForm createNewBoard = {createNewBoard}></NewBoardForm>
           </div>
-          <button onClick={toggleBoardForm}>{isBoardFormVisible ? 'Hide Board Form' : 'Show Board Form'}</button>
+          <button onClick={toggleBoardForm}>{isBoardFormVisible ? '🫥' : '✏️'}</button>
         </section>
       </section>
       <section className="selected-boards-container">
         <section>
-          <CardsList board={selectedBoard}></CardsList>
+          {selectedBoard.id ? 
+            <CardsList board={selectedBoard}></CardsList> : null}
         </section>
       </section>
       </div>
