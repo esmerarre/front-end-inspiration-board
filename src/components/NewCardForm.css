@@ -1,8 +1,9 @@
 .card-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
   justify-content: start;
+  align-items: center;
 }
 
 .input-wrapper input {

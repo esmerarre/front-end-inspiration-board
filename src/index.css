@@ -13,33 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #000000;
-}
-
 .box {
   margin: 0;
   display: flex;
-  /* place-items: center; */
-  align-items: flex-start;
-  /* min-width: 320px;
-  min-height: 100vh; */
+  justify-content: space-around;
 }
 
 .box .boards-container {
-  background-color: rgb(241, 242, 243);
+  background-color:white;
   border: 2px solid rgb(18, 20, 21);
   border-radius: 20px;
-  padding: 30px;
-  margin-right: 300px;
-  margin-left: 150px;
+  padding: 25px;
 }
-
 
 h1 {
   font-size: 3.2em;
@@ -47,13 +32,14 @@ h1 {
 }
 
 .existing-boards-container {
-  border: #d2caca;
-  border-radius: 10px ;
+  border: white;
+  border-radius: 10px;
+  align-items: center;
 }
 
 .existing-boards-container ul {
   list-style-type: none;
-  margin-top: 2rem;
+  align-items: center;
 }
 
 button {
@@ -66,7 +52,6 @@ button {
   font-family: inherit;
   background-color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
   margin-top: 1rem;
 }
 

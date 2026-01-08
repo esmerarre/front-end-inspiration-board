@@ -8,12 +8,13 @@
 
 .card-control-options {
     display: flex;
-    align-items: center;
-    margin-top: 0rem;
+    justify-content: space-between;
 }
 
 .card-control-options button {
-    margin-right: 0.5rem;
-    /* border: none; */
-    background-color: transparent;
+    border: none;
+    background-color: rgb(225, 225, 127);
+    padding: 2px 5px;
+    margin-top: 0px;
+    border-radius: 0px;
 }
