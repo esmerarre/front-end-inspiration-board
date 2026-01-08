@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .box {
   margin: 0;
   display: flex;
@@ -75,3 +81,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
