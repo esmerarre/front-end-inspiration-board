@@ -8,5 +8,15 @@
 
 .input-wrapper input {
   background-color: white;
-  color: black
+  color: black;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
 }
