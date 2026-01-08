@@ -1,7 +1,20 @@
 .card-item {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 1rem;
     border-radius: 8px;
     margin: 10px;
+    background-color: rgb(235, 235, 92);
 }
 
+.card-control-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-control-options button {
+    border: none;
+    background-color: rgb(225, 225, 127);
+    padding: 2px 5px;
+    margin-top: 0px;
+    border-radius: 0px;
+}

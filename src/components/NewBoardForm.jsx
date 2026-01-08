@@ -50,11 +50,11 @@ const NewBoardForm = ({createNewBoard}) => {
 
   return (
     <form onSubmit={handleSubmit} className="board-form">
-      <div>
+      <div className="input-wrapper">
         <label htmlFor="title">Title: </label>
         { makeControlledInput('title') }
       </div>
-      <div>
+      <div className="input-wrapper">
         <label htmlFor="owner">Owner's Name: </label>
         { makeControlledInput('owner') }
       </div>
