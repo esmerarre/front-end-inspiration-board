@@ -50,7 +50,7 @@ const NewCardForm = ({createNewCard}) => {
 
   return (
     <form onSubmit={handleSubmit} className="card-form">
-      <div>
+      <div className="input-wrapper">
         <label htmlFor="message">Message: </label>
         { makeControlledInput('message') }
       </div>
